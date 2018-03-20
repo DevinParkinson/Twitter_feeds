@@ -22,6 +22,10 @@ class TwitterClient
     tweets
   end
 
+  def self.tweet(message)
+    client.update(message)
+  end
+
   private
     def self.client
       Twitter::REST::Client.new do |config|
